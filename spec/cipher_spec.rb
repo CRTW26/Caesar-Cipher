@@ -16,7 +16,10 @@ RSpec.describe Cipher do
     end  
     it 'returns dbs when given car' do 
       expect(cipher.scramble('car',1)).to eq 'dbs'
-    end    
+    end 
+    it 'Bmfy f xywnsl! when given What a string!, 5' do
+      expect(cipher.scramble("What a string!", 5)).to eq "Bmfy f xywnsl!"
+    end 
   end
 
   describe '#uppercase?' do 

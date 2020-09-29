@@ -3,10 +3,14 @@ class Cipher
   def scramble(string, shift)
     encrypted = []
     string.each_char do |char|
-      if lowercase?(char)
+      if char.ord == 32
+        encrypted << char
+      elsif lowercase?(char)
         encrypted << ((char.ord + (shift - 97)) % 26 + 97).chr
-      else
+      elsif uppercase?(char)
         encrypted << ((char.ord + (shift - 65)) % 26 + 65).chr
+      else
+        encrypted << char
       end 
     end 
     encrypted.join
