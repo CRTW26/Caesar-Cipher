@@ -24,4 +24,13 @@ RSpec.describe Cipher do
       expect(cipher.uppercase?('j')).to be(false)
     end 
   end 
+
+  describe "#lowercase?" do
+    it 'returns true when given k' do 
+      expect(cipher.lowercase?('k')).to be(true)
+    end 
+    it 'returns false when given Q' do 
+      expect(cipher.lowercase?('K')).to be (false)
+    end 
+  end 
 end 

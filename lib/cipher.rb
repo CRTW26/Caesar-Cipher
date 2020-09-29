@@ -11,4 +11,8 @@ class Cipher
     (65..90).include? char.ord
   end 
 
+  def lowercase?(char)
+    (97..122).include? char.ord
+  end 
+
 end 
