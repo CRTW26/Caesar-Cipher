@@ -13,7 +13,10 @@ RSpec.describe Cipher do
     end 
     it 'returns E when given B, 2' do 
       expect(cipher.scramble('B', 3)).to eq 'E'
-    end     
+    end  
+    it 'returns dbs when given car' do 
+      expect(cipher.scramble('car',1)).to eq 'dbs'
+    end    
   end
 
   describe '#uppercase?' do 

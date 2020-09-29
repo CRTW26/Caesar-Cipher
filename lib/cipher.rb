@@ -1,11 +1,15 @@
 class Cipher 
 
   def scramble(string, shift)
-    if lowercase?(string)
-      ((string.ord + (shift - 97)) % 26 + 97).chr
-    else
-      ((string.ord + (shift - 65)) % 26 + 65).chr
+    encrypted = []
+    string.each_char do |char|
+      if lowercase?(char)
+        encrypted << ((char.ord + (shift - 97)) % 26 + 97).chr
+      else
+        encrypted << ((char.ord + (shift - 65)) % 26 + 65).chr
+      end 
     end 
+    encrypted.join
   end 
 
   def uppercase?(char)
