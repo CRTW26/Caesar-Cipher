@@ -10,6 +10,9 @@ RSpec.describe Cipher do
     end 
     it 'returns c when given z, 3' do 
       expect(cipher.scramble('z', 3)).to eq 'c'
+    end 
+    it 'returns E when given B, 2' do 
+      expect(cipher.scramble('B', 3)).to eq 'E'
     end     
   end
 
