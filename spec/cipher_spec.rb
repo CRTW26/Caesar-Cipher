@@ -16,4 +16,12 @@ RSpec.describe Cipher do
     end     
   end
 
+  describe '#uppercase?' do 
+    it 'returns true when given H' do 
+      expect(cipher.uppercase?('E')).to be(true) 
+    end 
+    it 'returns false when given j' do 
+      expect(cipher.uppercase?('j')).to be(false)
+    end 
+  end 
 end 
